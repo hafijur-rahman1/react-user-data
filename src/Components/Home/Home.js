@@ -9,7 +9,11 @@ const Home = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <Button variant="primary" className="m-3">
+      <Button
+        variant="primary"
+        className="m-3"
+        onClick={() => navigate("/create")}
+      >
         Add Data
       </Button>
       {/* table information */}
@@ -33,7 +37,11 @@ const Home = () => {
                 <td>{position}</td>
                 <td>{salary}</td>
                 <td>
-                  <Button className=" m-2" variant="info">
+                  <Button
+                    className=" m-2"
+                    variant="info"
+                    onClick={() => navigate(`/read/${user.id}`)}
+                  >
                     Read
                   </Button>
                   <Button className="m-2" variant="primary">

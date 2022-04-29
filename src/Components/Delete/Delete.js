@@ -8,21 +8,29 @@ const Delete = () => {
   const { id } = useParams();
 
   const deleteUser = (id) => {
-    const restUser = users.filter((user) => user.id != id);
-    setUsers(restUser);
+    console.log(typeof id);
+    const restUser = users.filter((user) => user.id !== Number(id));
     console.log(restUser);
+    setUsers(restUser);
   };
 
   return (
     <Modal.Dialog>
       <Modal.Header closeButton>
-        <Modal.Title>you are deleting ID no:{id}</Modal.Title>
+        <Modal.Title>you are deleting info of {id}</Modal.Title>
       </Modal.Header>
 
       <Modal.Footer>
         <Link to="/">
-          <Button variant="secondary">Cancel</Button>
-          <Button variant="primary" onClick={() => deleteUser(id)}>
+          <Button variant="secondary" className="m-3">
+            Cancel
+          </Button>
+          <Button
+            variant="primary"
+            onClick={() => {
+              deleteUser(id);
+            }}
+          >
             Delete
           </Button>
         </Link>

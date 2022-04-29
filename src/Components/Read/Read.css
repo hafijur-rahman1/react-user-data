@@ -1,0 +1,8 @@
+.read {
+  padding: 25px;
+  margin: auto;
+  width: 450px;
+  background-color: bisque;
+  border: 1 px solid slategrey;
+  border-radius: 5px;
+}

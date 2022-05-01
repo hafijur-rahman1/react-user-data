@@ -7,6 +7,7 @@ import Home from "./Components/Home/Home";
 import Delete from "./Components/Delete/Delete";
 import Read from "./Components/Read/Read";
 import Create from "./Components/Create/Create";
+import Edit from "./Components/Edit/Edit";
 function App() {
   return (
     <div className="">
@@ -22,6 +23,9 @@ function App() {
               <Route path=":id" element={<Read />} />
             </Route>
             <Route path="create" element={<Create />} />
+            <Route path="edit" element={<Edit />}>
+              <Route path=":id" element={<Edit />}></Route>
+            </Route>
           </Routes>
         </Router>
       </UserProvider>

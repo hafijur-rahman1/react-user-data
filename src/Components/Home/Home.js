@@ -2,16 +2,16 @@ import React, { useContext } from "react";
 import { Button, Table } from "react-bootstrap";
 import { UserContext } from "./../UseContext/UseContext";
 import { useNavigate } from "react-router-dom";
-
+import "./Home.css";
 const Home = () => {
   const [users, setUsers] = useContext(UserContext);
   // console.log(users);
   const navigate = useNavigate();
   return (
-    <div>
+    <div className="homeSection">
       <Button
         variant="primary"
-        className="m-3"
+        className="m-3 text-center"
         onClick={() => navigate("/create")}
       >
         Add Data
@@ -44,7 +44,11 @@ const Home = () => {
                   >
                     Read
                   </Button>
-                  <Button className="m-2" variant="primary">
+                  <Button
+                    className="m-2"
+                    variant="primary"
+                    onClick={() => navigate(`/edit/${user.id}`)}
+                  >
                     Edit
                   </Button>
 

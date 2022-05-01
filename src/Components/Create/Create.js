@@ -85,10 +85,10 @@ const Create = () => {
           >
             Back
           </Button>
+          <Button className="action_btn m-3" variant="danger" type="submit">
+            Create User
+          </Button>
         </Link>
-        <Button className="action_btn m-3" variant="danger" type="submit">
-          Create User
-        </Button>
       </Form>
     </div>
   );

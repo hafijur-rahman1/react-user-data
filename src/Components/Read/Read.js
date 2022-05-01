@@ -2,8 +2,9 @@ import React from "react";
 import "./Read.css";
 import { useContext } from "react";
 
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { UserContext } from "./../UseContext/UseContext";
+import { Button } from "react-bootstrap";
 
 const Read = () => {
   const [users, setUsers] = useContext(UserContext);
@@ -20,6 +21,9 @@ const Read = () => {
         <p> user id: {selectedUser[0].id}</p>
         <p>Position: {selectedUser[0].position}</p>
         <p>Salary: {selectedUser[0].salary}</p>
+        <Link to={"/"}>
+          <Button>Back</Button>
+        </Link>
       </section>
     </div>
   );
